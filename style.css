@@ -144,6 +144,93 @@ a:hover { color: var(--accent); }
   margin: 1rem 0 0;
 }
 
+/* essay page (design philosophy) */
+.essay {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.sep-wide { max-width: 940px; }
+
+.essay p {
+  color: var(--text-dim);
+  margin: 0 0 1.5rem;
+}
+
+.essay ul,
+.essay ol,
+.essay li {
+  color: var(--text-dim);
+}
+
+/* image below the paragraphs */
+.essay-figure {
+  text-align: center;
+  margin: 2.5rem 0 0;
+}
+
+.essay-figure img {
+  width: min(520px, 100%);
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* essay headings + list spacing */
+.essay h4 {
+  color: var(--text);
+  margin: 2rem 0 0.4rem;
+}
+
+.essay ul {
+  padding-left: 1.4rem;
+  margin: 0 0 1.5rem;
+}
+
+.essay li {
+  margin: 0 0 0.3rem;
+}
+
+/* horizontal thumbnail strip of all star drawings */
+/* breaks out of the text column to use the full page width */
+.star-lineup {
+  text-align: center;
+  margin: 4rem calc(-50vw + 50%);
+}
+
+.thumbnail-strip {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.thumbnail-strip img {
+  flex: 0 0 auto;
+  width: clamp(32px, 3.4vw, 48px);
+  height: auto;
+  margin-right: clamp(0.25rem, 1vw, 0.7rem);
+  transition: transform 0.25s ease;
+}
+
+.thumbnail-strip img:last-of-type { margin-right: 0; }
+
+.thumbnail-strip img:hover {
+  transform: translateY(-4px);
+}
+
+.star-lineup figcaption {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  padding-top: 0.6rem;
+}
+
 /* footer */
 .site-footer {
   border-top: 1px solid var(--line);
